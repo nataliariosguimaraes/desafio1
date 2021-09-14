@@ -1,1 +1,40 @@
-export class CreateTransactionDto {}
+import {
+    IsIn,
+    IsISO8601,
+    IsNotEmpty,
+    isString,
+    IsString,
+    MaxLength,
+} from 'class-validator';
+import { TransactionCategory, TransactionCategoryList, TransactionType, TransactionTypeList } from '../entities/transaction.entity';
+
+export class CreateTransactionDto {
+    @IsISO8601()
+    @IsNotEmpty()
+    payment_date: Date;
+
+    @MaxLength(255)
+    @IsString()
+    @IsNotEmpty()
+    name: string;
+
+    @MaxLength(255)
+    @IsString()
+    @IsNotEmpty()
+    description: string
+
+    @IsIn(TransactionCategoryList)
+    @IsNotEmpty()
+    category: TransactionCategory
+
+    @IsNotEmpty()
+    amount: number
+
+    @IsIn(TransactionTypeList)
+    @IsNotEmpty()
+    type: TransactionType
+}
+function IsISO8681() {
+    throw new Error("Function not implemented.");
+}
+

@@ -1,12 +1,13 @@
+import { Transaction } from './entities/transaction.entity';
 import { Module } from '@nestjs/common';
 import { TransactionsService } from './transactions.service';
 import { TransactionsController } from './transactions.controller';
-import { Sequelize } from 'sequelize';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { Transaction } from 'sequelize';
+import { Account } from 'src/accounts/entities/account.entity';
+
 
 @Module({
-  imports: [SequelizeModule.forFeature([Transaction])],
+  imports: [SequelizeModule.forFeature([Transaction, Account])],
   controllers: [TransactionsController],
   providers: [TransactionsService]
 })

@@ -1,1 +1,38 @@
 GET http://localhost:3000/transactions
+
+POST 
+###
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "payment_date": "2021-01-01",
+  "name": "Nova conta 1",
+  "description": "Descrição",
+  "category": "category1",
+  "amount": 30,
+  "type": "debit"
+}
+
+
+POST 
+###
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+
+}
+
+
+###
+GET http://localhost:3000/accounts
+
+###
+POST http://localhost:3000/accounts
+Content-Type: application/json
+
+{
+    "name": "Account 1",
+    "subdomain": "tenant1"
+}
