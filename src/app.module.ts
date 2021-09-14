@@ -22,7 +22,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
       synchronize: true,
       sync: {
         alter: true,
-      }
+      },
     }),
     TransactionsModule
   ],
