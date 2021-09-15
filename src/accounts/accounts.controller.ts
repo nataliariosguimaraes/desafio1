@@ -5,10 +5,13 @@ import {
   Body,
   Param,
   ParseUUIDPipe,
+  UseGuards,
 } from '@nestjs/common';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { AccountsService } from './accounts.service';
 import { CreateAccountDto } from './dto/create-account.dto';
 
+@UseGuards(JwtAuthGuard)
 @Controller('accounts')
 export class AccountsController {
   constructor(private readonly accountsService: AccountsService) { }

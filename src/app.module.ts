@@ -9,7 +9,7 @@ import { AccountsModule } from './accounts/accounts.module';
 import { Account } from './accounts/entities/account.entity';
 import { CommonModule } from './common/common.module';
 import { AuthModule } from './auth/auth.module';
-import { TenantModule } from './tenant/tenant.module';
+//import { TenantModule } from './tenant/tenant.module';
 import { ReportsModule } from './reports/reports.module';
 
 @Module({
@@ -33,7 +33,7 @@ import { ReportsModule } from './reports/reports.module';
     AccountsModule,
     CommonModule,
     AuthModule,
-    TenantModule,
+    //TenantModule,
     ReportsModule
   ],
   controllers: [AppController],

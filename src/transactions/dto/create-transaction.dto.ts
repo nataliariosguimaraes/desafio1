@@ -34,7 +34,5 @@ export class CreateTransactionDto {
     @IsNotEmpty()
     type: TransactionType
 }
-function IsISO8681() {
-    throw new Error("Function not implemented.");
-}
+
 

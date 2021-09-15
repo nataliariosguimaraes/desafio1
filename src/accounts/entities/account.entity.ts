@@ -29,6 +29,6 @@ export class Account extends Model {
     @Column({ type: DataType.DECIMAL(10, 2), allowNull: false })
     balance: number;
 
-    @Column({ allowNull: false })
-    subdomain: string;
+    // @Column({ allowNull: false })
+    // subdomain: string;
 }

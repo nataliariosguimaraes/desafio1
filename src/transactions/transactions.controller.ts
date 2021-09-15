@@ -1,10 +1,10 @@
-import { TenantGuard } from './../tenant/tenant.guard';
+//import { TenantGuard } from './../tenant/tenant.guard';
 import { JwtAuthGuard } from './../auth/jwt-auth.guard';
-import { Controller, Get, Post, Body, UseGuards, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, Req } from '@nestjs/common';
 import { TransactionsService } from './transactions.service';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 
-@UseGuards(JwtAuthGuard, TenantGuard)
+//@UseGuards(JwtAuthGuard, TenantGuard)
 @Controller('transactions')
 export class TransactionsController {
   constructor(private readonly transactionsService: TransactionsService) { }
